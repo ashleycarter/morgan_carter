@@ -1,0 +1,70 @@
+// =========================================
+// Contact
+// =========================================
+
+.contact {
+	background: url('../img/contact-background.jpg') center center no-repeat;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+ 	 -o-background-size: cover;
+  	background-size: cover;
+	padding: 5em 0;
+	.inner {
+		@include inner;
+		color: white;
+		text-align: center;
+		display: -webkit-box;
+	    display: -moz-box;
+	    display: box;
+	    -webkit-box-orient: vertical;
+	    -moz-box-orient: vertical;
+	    box-orient: vertical;
+	    @include breakpoint($medium) {
+	    	display: block;
+	    	text-align: left;
+	    }
+		div:first-child {
+			width: 100%;
+			margin: 0 auto;
+	    -webkit-box-ordinal-group: 2;
+    	-moz-box-ordinal-group: 2;
+   		box-ordinal-group: 2;
+   		margin-top: 3em;
+			@include breakpoint($medium) {
+				width: 50%;
+				float: left;
+				margin-top: 0;
+			}
+			p {
+				line-height: 0.5em;
+				margin-top: 1em;
+			}
+		}
+		div:last-child  {
+			width: 100%;
+			margin: 0 auto;
+			@include breakpoint($medium) {
+				width: 50%;
+				float: right;
+				padding-left: 1em;
+			}
+			@include breakpoint($large) {
+				padding: 0;
+			}
+		}
+	}
+}
+
+.contact a {
+	text-decoration: none;
+	color: white;
+}
+
+.contact .social-icons {
+	margin: 2em 0 0;
+	li {
+		font-size: 0.9em;
+		margin: 0;
+		margin-right: 10px;
+	}
+}

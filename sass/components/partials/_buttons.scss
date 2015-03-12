@@ -1,0 +1,31 @@
+// =========================================
+// Buttons
+// =========================================
+
+@mixin default-button {
+	float: left;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	background-color: lighten($default-green, 5%);
+	color: white;
+	transition: background-color .3s ease;
+	-webkit-transition: background-color .3s ease;
+	-moz-transition: background-color .3s ease;
+
+	&:hover {
+		background-color: darken($default-green, 10%);
+	}	
+}
+
+.button {
+	@include default-button;
+	width: 60%;
+	font-size: 0.75em;
+	margin-top: 1em;
+	padding: 1em;
+}
+
+a {
+	text-decoration: none;
+}

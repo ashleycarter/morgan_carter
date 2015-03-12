@@ -1,0 +1,17 @@
+// =========================================
+// Color Palette
+// =========================================
+
+// Base Colors
+$white    : #fff;
+$black    : #383838;
+
+$default-green         : #609c83;
+$default-blue          : #1b8798;
+$default-light-grey    : #ececec;
+
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	color: $white;
+}

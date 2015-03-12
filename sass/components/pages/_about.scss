@@ -1,0 +1,148 @@
+// =========================================
+// About Section
+// =========================================
+
+.about-me {
+	background-color: $default-blue;
+	padding: 5em 0;
+	@include breakpoint($medium) {
+		background: url('../img/about-background.jpg') center center no-repeat;
+		-webkit-background-size: cover;
+	  	-moz-background-size: cover;
+	 	-o-background-size: cover;
+	  	background-size: cover;
+	}
+	.inner {
+		@include inner;
+		color: white;
+	}
+	h2 {
+		margin-bottom: 0.25em;
+	}
+}
+
+.about-icons {
+	margin: 0 auto;
+	margin-top: 2em;
+	div {
+		display: inline-block;
+		margin: 0.35em;
+		width: 70%;
+		padding: 2em 0;
+		background-color: rgba(0,0,0,0.1);
+
+		transition: background-color .3s;
+		-webkit-transition: background-color .3s;
+		-moz-transition: background-color .3s;
+		@include breakpoint($medium) {
+			width: 40%;
+		}
+		@include breakpoint($large) {
+			width: 23%;
+			margin: 0.25em;
+		}
+	}
+	li {
+		display: inline-block;
+		i {
+			font-size: 2.5em;
+			padding: 0.5em 0.625em;
+
+			transform: translateY(0%);
+			-ms-transform: translateY(0%); /* IE 9 */
+   			-webkit-transform: translateY(0%); /* Chrome, Safari, Opera */
+
+			@include breakpoint($large) {
+				transform: translateY(20%);
+				-ms-transform: translateY(20%); /* IE 9 */
+   				-webkit-transform: translateY(20%); /* Chrome, Safari, Opera */
+				
+				transition: transform .5s;
+				-webkit-transition: transform .5s;
+				-moz-transition: transform .5s;
+
+				/* Safari */
+				-webkit-transition-property: transform;
+    			-webkit-transition-duration: .5s;
+			}
+			.i-pitch {
+				font-size: 1.75em;
+				padding: 0.35em 0.45em;
+			}
+		}
+	}
+	p {
+		opacity: 1;
+		margin-top: 0.5em;
+
+		transform: translateY(10%);
+		-ms-transform: translateY(10%); /* IE 9 */
+		-webkit-transform: translateY(10%); /* Chrome, Safari, Opera */
+
+		@include breakpoint($large) {
+			opacity: 0;
+			margin-top: 1em;
+
+			transform: translateY(50%);
+			-ms-transform: translateY(50%); /* IE 9 */
+			-webkit-transform: translateY(50%); /* Chrome, Safari, Opera */
+
+			transition: opacity .5s, transform .5s;
+			-webkit-transition: opacity .5s, transform .5s;
+			-moz-transition: opacity .5s, transform .5s;
+
+			/* Safari */
+			-webkit-transition-property: transform;
+    		-webkit-transition-duration: .5s;
+
+    		-webkit-transition-property: opacity;
+    		-webkit-transition-duration: .5s;
+		}
+	}
+}
+
+// CSS Transitions for Large Displays
+
+.about-icons div:hover {
+	@include breakpoint($large) {
+		background-color: rgba(0,0,0,0.2);
+
+		transition: background-color .3s;
+		-webkit-transition: background-color .3s;
+		-moz-transition: background-color .3s;
+
+		i {
+			transform: translateY(0%);
+			-ms-transform: translateY(0%); /* IE 9 */
+			-webkit-transform: translateY(0%); /* Chrome, Safari, Opera */
+
+			transition: transform .5s;
+			-webkit-transition: transform .5s;
+			-moz-transition: transform .5s;
+
+			/* Safari */
+			-webkit-transition-property: transform;
+    		-webkit-transition-duration: .5s;
+		}
+		p {
+			opacity: 1;
+			transform: translateY(0%);
+			-ms-transform: translateY(0%); /* IE 9 */
+			-webkit-transform: translateY(0%); /* Chrome, Safari, Opera */
+
+			transition: opacity .5s, transform .5s;
+			-webkit-transition: opacity .5s, transform .5s;
+			-moz-transition: opacity .5s, transform .5s;
+
+			/* Safari */
+			-webkit-transition-property: transform;
+    		-webkit-transition-duration: .5s;
+
+			-webkit-transition-property: opacity;
+    		-webkit-transition-duration: .5s;
+		}
+	}
+}
+
+
+

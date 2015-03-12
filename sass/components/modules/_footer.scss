@@ -1,0 +1,56 @@
+// =========================================
+// Footer Styles
+// =========================================
+
+footer {
+	background-color: $black;
+	color: rgba($default-light-grey, 0.5);
+	font-size: 0.85em;
+	padding: 2em 0;
+	.inner {
+		@include inner;
+		max-width: 1280px;
+	}
+	p {
+		text-align: left;
+		display: block;
+		@include breakpoint($medium) {
+			margin: 1em;
+			display: inline-block;
+		}
+		&:last-child {
+			padding-top: 0;
+		}
+	}
+	a {
+		text-decoration: none;
+		color: rgba($default-light-grey, 0.5);
+	}
+}
+
+.credits {
+	float: left;
+	p:nth-child(2) {
+		display: none;
+		@include breakpoint($medium) {
+			display: inline-block;
+		}
+	}
+}
+
+.back-to-top {
+	float: right;
+	width: 20%;
+	p {
+		float: right;
+		@media screen and (max-width: 493px) {
+			margin-top: 10px;
+		}
+	}
+	i {
+		display: inline;
+		padding: 0.5em 0.65em;
+		color: rgba($default-light-grey, 0.5);
+		border: 3px solid rgba($default-light-grey, 0.5);
+	}
+}

@@ -1,0 +1,44 @@
+// =========================================
+// Layout
+// =========================================
+
+// Devices Sizes
+// $small           : 25em;   // 400px
+// $medium          : 40em;   // 640px
+// $x-medium        : 60em;   // 960px
+// $large           : 64em;   // 1024px
+// $x-large         : 80em;   // 1280px
+
+// Susy setup
+$susy: (
+	columns: 12,
+	container: 25em,
+	gutters: 1/4,
+	gutter-position: inside
+);
+
+$small: 25em;
+$medium: 40em;
+$x-medium: 60em;
+$large: 64em;
+$x-large: 80em;
+
+@include border-box-sizing;
+
+#content {
+	height: 100%;
+}
+
+@mixin inner {
+	width: 85%;
+	margin: 0 auto;
+	text-align: center;
+	p {
+		line-height: 1.75em;
+		font-weight: lighter;
+	}
+	@include breakpoint ($large) {
+		width: 60%;
+		max-width: 980px;
+	}
+}

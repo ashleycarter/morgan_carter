@@ -1,0 +1,18 @@
+// =========================================
+// Forms
+// =========================================
+
+input, textarea {
+	width: 100%;
+	border: none;
+	background-color: $default-light-grey;
+	margin-bottom: 1em;
+	padding: 1.5em;
+	text-transform: uppercase;
+}
+
+input[type=submit] {
+	@include default-button;
+	width: 30%;
+	cursor: pointer;
+}

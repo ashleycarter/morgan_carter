@@ -1,0 +1,138 @@
+// =========================================
+// Worked With Section
+// =========================================
+
+.worked-with {
+	background: $default-light-grey;
+	padding: 5em 0;
+	.inner {
+		@include inner;
+	}
+	h2 {
+		color: $black;
+		text-align: center;
+		margin-bottom: 0.25em;
+	}
+	.logos {
+		width: 95%;
+		max-width: 900px;
+		text-align: center;
+		margin: 0 auto;
+		margin-top: 2em;
+	}
+	ul {
+		display: block;
+		width: 80%;
+		margin: 0 auto;
+		@media screen and (max-width: 720px) {
+			width: 100%;
+		}
+		@include breakpoint($x-medium) {
+			@include flexbox;
+			@include flexbox-align-center;
+			width: 100%;
+		}
+		li {
+			display: block;
+			min-width: 0;
+			margin: 0 auto;
+			margin-bottom: 2em;
+			@media screen and (max-width: 539px) {
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+			@include breakpoint($medium) {
+				width: 49%;
+				display: inline-block;
+			}
+			@include breakpoint($x-medium) {
+				@include flexbox-align-center;
+	  			-webkit-box-flex: 1;      /* OLD - iOS 6-, Safari 3.1-6 */
+			  	-moz-box-flex: 1;         /* OLD - Firefox 19- */
+			  	// width: 20%;               /* For old syntax, otherwise collapses. */
+			  	-webkit-flex: 1;          /* Chrome */
+			  	-ms-flex: 1;              /* IE 10 */
+			  	flex: 1;                  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+			}
+			span {
+				margin: 0 auto;
+			}
+		}
+	}
+}
+
+.logos-cupids {
+	background-position: 0 -238px;
+	display: block;
+	width: 500px;
+	height: 290px;
+	-moz-transform-origin: 0 0;
+	zoom: 0.4;
+	-moz-transform:scale(0.4);
+	@include breakpoint($x-medium) {
+		zoom: 0.3;
+  		-moz-transform:scale(0.3);
+	}
+}
+
+.logos-chloe {
+	display: block;
+	width: 620px;
+	height: 230px;
+	-moz-transform-origin: 0 0;
+	zoom: 0.4;
+	-moz-transform:scale(0.5);
+	@include breakpoint($x-medium) {
+		zoom: 0.35;
+  		-moz-transform:scale(0.35);
+	}
+}
+
+.logos-newscastic {
+	background-position: 0px -1226px;
+	display: block;
+	width: 330px;
+	height: 86px;
+	-moz-transform-origin: 0 0;
+	zoom: 0.85;
+	-moz-transform:scale(0.85);
+
+	position: relative;
+	left: 30px;
+	top: -20px;
+
+	@include breakpoint($x-medium) {
+		zoom: 0.75;
+  		-moz-transform:scale(0.75);
+  		top: 0;
+	}
+}
+
+// .logos-westword {
+// 	display: block;
+// 	width: 215px;
+// 	height: 88px;
+// 	-moz-transform-origin: 0 0;
+// 	zoom: 1;
+// 	-moz-transform:scale(1);
+// 	@include breakpoint($x-medium) {
+// 		zoom: 0.8;
+//   	-moz-transform:scale(0.8);
+// 	}
+// }
+
+.logos-lodo {
+	display: block;
+	background-image: url('/img/logos/lodo.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 80px;
+	height: 130px;
+}
+
+
+
+
+

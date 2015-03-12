@@ -1,0 +1,92 @@
+// =========================================
+// Featured Section
+// =========================================
+
+.featured {
+	background: $default-light-grey;
+	padding: 5em 0;
+	h2 {
+		color: $black;
+		text-align: center;
+	}
+	h3 {
+		color: $black;
+		font-family: $base--font-family;
+		text-transform: uppercase;
+		line-height: 1.25em;
+		@include breakpoint($large) {
+			font-size: 1em;
+		}
+
+		a {
+			color: $black;
+			text-decoration: none;
+		}
+	}
+	.inner {
+		@include inner;
+		text-align: left;
+		@include breakpoint($large) {
+			width: 90%;
+		}
+	}
+}
+
+.left { 
+	@include breakpoint(980px) {
+		float: left;
+	} 
+}
+
+.right { 
+	@include breakpoint(980px) {
+		float: right; 
+	}
+}
+
+.left, .right {
+	margin-top: 3em;
+	margin-bottom: 3em;
+	padding: 0;
+	width: 100%;
+	@media screen and (min-width: 980px) {
+		width: 50%;
+		padding-right: 1em;
+	}
+	img {
+		width: 35%;
+		float: left;
+		padding-right: 1em;
+	}
+	.article-snippet {
+		width: 65%;
+		float: right;
+		p {
+			margin-top: 0.5em;
+			margin-bottom: 0.5em;
+			@include breakpoint($large) {
+				font-size: 14px;
+				margin-bottom: 0;
+			}
+		}
+		@include breakpoint($large) {
+			padding-right: 1em;
+		}
+	}
+}
+
+.archive-link {
+	display: block;
+	width: 30%;
+	margin: 0 auto;
+	text-align: center;
+	border: 1px solid $black;
+	clear: both;
+	a {
+		text-decoration: none;
+		h4 {
+			color: $black;
+			padding: 1.5em;
+		}
+	}
+}

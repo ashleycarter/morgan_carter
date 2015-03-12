@@ -1,0 +1,123 @@
+// =========================================
+// Header Styles
+// =========================================
+
+header {
+	background-color: $default-green;
+	text-transform: uppercase;
+	text-align: center;
+	color: white;
+	height: 500px;
+	padding: 0;
+	@include breakpoint($medium) {
+		padding: 0;
+		padding-right: 2em;
+	}
+}
+
+.hero-image {
+	background: url(../img/mc_photo.jpg) center center no-repeat;
+	background-size: cover;
+	float: right;
+	height: 100%;
+	opacity: 0.3;
+	display: block;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	@include breakpoint($medium) {
+		margin-right: 2em;
+		float: left;
+		left: 0;
+		top: 0;
+		height: 500px;
+		width: 40%;
+		max-width: 450px;
+		opacity: 1;
+	}
+	@include breakpoint($large) {
+		border-left: 80px solid white;
+		max-width: 550px;
+	}
+}
+
+.intro {
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+	top: 50%;
+	transform: translateY(-50%);
+	-ms-transform: translateY(-50%); /* IE 9 */
+    -webkit-transform: translateY(-50%); /* Chrome, Safari, Opera */
+	padding: 0 2em;
+	@include breakpoint($medium) {
+		position: relative;
+		padding: 0;
+	}
+	@include breakpoint($large) {
+		max-width: 1300px;
+	}
+}
+
+.lead {
+	li {
+		display: block;
+		text-align: center;
+		font-size: 1.35em;
+		font-weight: lighter;
+		margin-top: 0.5em;
+		margin-bottom: 0;
+		&:last-child {
+			margin-right: 0;
+		}
+		@include breakpoint(1100px) {
+			display: inline-block;
+			margin: 0.25em 2.35em 0 0;
+		}
+	}
+}
+
+.social-icons {
+	li {
+		font-size: 1.125em;
+		margin: 3em 0.25em 0;
+		display: inline-block;
+		@include breakpoint($medium) {
+			margin-left: 1em;
+			margin-right: 1em;
+		}
+		a {
+			text-decoration: none;
+			color: white;
+		}
+	}
+	i {
+		opacity: 1;
+		transition: opacity .3s ease;
+		-webkit-transition: opacity .3s ease;
+		-moz-transition: opacity .3s ease;
+		&:hover {
+			opacity: 0.5;
+		}
+	}
+}
+
+.see-blog {
+	background-color: white;
+	position: fixed;
+	width: 250px;
+	padding: 10px;
+	right: -80px;
+	top: 25px;
+	text-align: center;
+
+  	-webkit-transform: rotate(50deg);
+  	transform: rotate(50deg);
+
+	h2 {
+		font-family: 'Lato';
+		color: $black;
+		font-size: 1em;
+		text-transform: uppercase;
+	}
+}
